@@ -40,7 +40,7 @@ nav .container .collapse .navbar-nav .nav-item a {
 }
 
 nav .container .collapse .navbar-nav .nav-item a:hover {
-    background-color: var(--color_orange);
+    background-color: #FF7D1B;
     color: white;
 }
 
@@ -49,7 +49,7 @@ nav .container .div_icon_image {
 }
 
 nav .container .div_icon_image .icon {
-    margin-right: 25px;
+    margin-right: 45px;
 }
 
 nav .container .div_icon_image img {
@@ -96,6 +96,94 @@ nav .container .div_icon_image img {
     border: 2px solid var(--color_orange);
 }
 
+.container .container1 .row div .div_color {
+    margin-top: 80px;
+}
+
+.container .container1 .row div .div_color h1 {
+    font-weight: bold;
+}
+
+.container .container1 .row div .div_color .p_capitel {
+    text-transform: uppercase;
+    color: var(--color_orange);
+    font-weight: bold;
+}
+
+.container .container1 .row div .div_color .p_smool {
+    text-transform: lowercase;
+    color: rgba(0, 0, 0, 0.379);
+}
+
+.container .container1 .row div .div_color .div_flex1 {
+    display: flex;
+    gap: 20px;
+}
+
+.container .container1 .row div .div_color .div_flex1 h3 {
+    font-weight: bold;
+}
+
+.container .container1 .row div .div_color .div_flex1 p {
+    color: #E29156;
+    background-color: #FFEDDF;
+    margin-top: 6px;
+    padding: 0.5% 1% 0.5% 1%;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.container .container1 .row div .div_color del {
+    color: #ccc;
+    font-weight: bold;
+}
+
+.container .container1 .row div .div_color div .div_flex2 {
+    display: flex;
+    gap: 50px;
+    padding: 2% 2% 0% 2%;
+    background-color: #eeeeee7a;
+    transition: 0.5s;
+}
+
+.container .container1 .row div .div_color div .div_flex2:hover {
+    background-color: #FF7D1B;
+    color: white;
+}
+
+.container .container1 .row div .div_color div .div_flex2 p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container .container1 .row div .div_color div .div_flex2 .p_orange {
+    color: var(--color_orange);
+    cursor: pointer;
+}
+
+.container .container1 .row div .div_color div div button {
+    background-color: #FF7D1B;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 1px 5px 10px #ff7e1b8f;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+.container .container1 .row div .div_color div div button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    box-shadow: none;
+}
+
+.container .container1 .row div .div_color .div_box_flex {
+    display: flex;
+    gap: 10px;
+}
+
 /* end main */
 /* start media */
 @media (max-width: 988px) and (min-width: 0px) {
@@ -128,23 +216,55 @@ nav .container .div_icon_image img {
     }
 
     .container .container1 .row div img {
-        width: 146%;
+        width: 126%;
         height: 400px;
         margin-left: -23%;
+        border-radius: 0px;
     }
 
     .container .container1 .row div .div_flex .div_box .div_white {
-        margin-left: -15px;
+        margin-left: -18px;
     }
 
     .container .container1 .row div .div_flex .div_box:hover .div_white {
-        width: 150%;
+        width: 140%;
+    }
+
+    .container .container1 .row div .div_color {
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    .container .container1 .row div .div_color .div_flex1 p {
+        margin-top: 0px;
+    }
+
+    .container .container1 .row div .div_color div div button {
+        width: 200px;
+        border-radius: 6px;
+        padding: 2%;
     }
 }
 
-@media (max-width: 768px) and (min-width: 0px) {
+@media (max-width: 767px) and (min-width: 0px) {
+    .container .container1 .row div img {
+        width: 150%;
+    }
+
     .container .container1 .row div .div_flex {
         display: none;
+    }
+
+    .container .container1 .row div .div_color .div_box_flex {
+        flex-direction: column;
+    }
+
+    .container .container1 .row div .div_color div .div_flex2 {
+        justify-content: center;
+    }
+
+    .container .container1 .row div .div_color div div button {
+        width: 100%;
     }
 }
 
