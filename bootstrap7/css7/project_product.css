@@ -84,6 +84,10 @@ nav .container .div_icon_image img {
     border-radius: 16px;
 }
 
+.container .container1 .row div .div_flex img {
+    width: 100px;
+}
+
 .container .div_onclick .div_flex3 .div_box .div_white {
     background-color: rgba(130, 130, 130, 0.867);
     width: 100%;
