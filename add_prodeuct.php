@@ -25,7 +25,7 @@
 
         $data = new mysqli("localhost", "root", "", "data_produect");
 
-        $table = $data->query("INSERT INTO `table_prodecut`(`title`, `string`, `money`, `pedaction_money`, `image1`, `image2`, `image3`, `image4`) VALUES ('$my_title','$my_string','$my_money','$my_pedaction_money','$my_image1','$my_image2','$my_image3','$my_image4')");
+        $table = $data->query("UPDATE `table_prodecut` SET `title`='$my_title',`string`='$my_string',`money`='$my_money',`pedaction_money`='$my_pedaction_money',`image1`='$my_image1',`image2`='$my_image2',`image3`='$my_image3',`image4`='$my_image4'");
 
         if ($table > 0) {
             print "the save produect" . "<br>" . "<a href='proejct_product.php'>click pack page</a>";

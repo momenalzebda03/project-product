@@ -185,17 +185,51 @@
                 <div class="col-12 col-md-6 col-lg-5">
                     <div class="div_color">
                         <p class="p_capitel">sneaker company</p>
-                        <h1>fall limited edition<br>sneakers</h1>
+                        <?php
+
+                        $table = $data->query("select * from table_prodecut");
+
+                        if ($table->num_rows > 0) {
+                            for ($row = 0; $row = $table->fetch_assoc(); $row++) {
+                                print "<h1>" . $row["title"] . "</h1>";
+                            }
+                        }
+                        ?>
                         <br>
-                        <p class="p_smool">these low-profile sneakers are your perfact casual wear<br>companion.
-                            featuring a durable rubber outer sole, they 'll<br>wthstand everything the weathing can
-                            offer.</p>
+                        <?php
+
+                        $table = $data->query("select * from table_prodecut");
+
+                        if ($table->num_rows > 0) {
+                            for ($row = 0; $row = $table->fetch_assoc(); $row++) {
+                                print "<p class='p_smool'>" . $row["string"] . "</p>";
+                            }
+                        }
+                        ?>
                         <div class="div_between">
                             <div class="div_flex1 mt-4">
-                                <h3>$125.00</h3>
+                                <?php
+
+                                $table = $data->query("select * from table_prodecut");
+
+                                if ($table->num_rows > 0) {
+                                    for ($row = 0; $row = $table->fetch_assoc(); $row++) {
+                                        print "<h3>" . $row["money"] . "</h3>";
+                                    }
+                                }
+                                ?>
                                 <p>50%</p>
                             </div>
-                            <del>$225.00</del>
+                            <?php
+
+                            $table = $data->query("select * from table_prodecut");
+
+                            if ($table->num_rows > 0) {
+                                for ($row = 0; $row = $table->fetch_assoc(); $row++) {
+                                    print "<del>" . $row["pedaction_money"] . "</del>";
+                                }
+                            }
+                            ?>
                         </div>
                         <br>
                         <br>
@@ -207,7 +241,7 @@
                                 <p class="p_orange" id="p_plus">+</p>
                             </div>
                             <div class="d-flex">
-                                <button><i class="fa-solid fa-plus" style="margin-right: 10px;"></i>add to
+                                <button name="btn"><i class="fa-solid fa-plus" style="margin-right: 10px;"></i>add to
                                     cart</button>
                             </div>
                         </div>
@@ -225,24 +259,69 @@
                 <i class="fas fa-times"></i>
             </p>
             <div class="div_scroll" id="div_scroll">
-                <img src="image7/Capture.PNG" alt="" class="my_image" id="my_image">
-                <img src="image7/Capture1.PNG" alt="" class="my_image" id="my_image5">
-                <img src="image7/Capture2.PNG" alt="" class="my_image" id="my_image6">
-                <img src="image7/Capture3.PNG" alt="" class="my_image" id="my_image7">
+                <?php
+
+                $table = $data->query("select * from table_prodecut");
+
+                if ($table->num_rows > 0) {
+                    for ($row = 0; $row = $table->fetch_assoc(); $row++) {
+                        print "<img src='image7/" . $row["image1"] . "' alt='' class='my_image' id='my_image'>";
+                        print "<img src='image7/" . $row["image2"] . "' alt='' class='my_image' id='my_image5'>";
+                        print "<img src='image7/" . $row["image3"] . "' alt='' class='my_image' id='my_image6'>";
+                        print "<img src='image7/" . $row["image4"] . "' alt='' class='my_image' id='my_image7'>";
+                    }
+                }
+                ?>
             </div>
             <div class="div_flex3 mt-4 ms-5 ps-2">
                 <div class="div_box">
-                    <img src="image7/Capture.PNG" alt="" id="my_image1">
+                    <?php
+
+                    $table = $data->query("select * from table_prodecut");
+
+                    if ($table->num_rows > 0) {
+                        for ($row = 0; $row = $table->fetch_assoc(); $row++) {
+                            print "<img src='image7/" . $row["image1"] . "' alt='' id='my_image1'>";
+                        }
+                    }
+                    ?>
                     <div class="div_white" id="my_whtie"></div>
                 </div>
                 <div class="div_box">
-                    <img src="image7/Capture1.PNG" alt="" id="my_image2">
+                    <?php
+
+                    $table = $data->query("select * from table_prodecut");
+
+                    if ($table->num_rows > 0) {
+                        for ($row = 0; $row = $table->fetch_assoc(); $row++) {
+                            print "<img src='image7/" . $row["image2"] . "' alt='' id='my_image2'>";
+                        }
+                    }
+                    ?>
                 </div>
                 <div class="div_box">
-                    <img src="image7/Capture2.PNG" alt="" id="my_image3">
+                    <?php
+
+                    $table = $data->query("select * from table_prodecut");
+
+                    if ($table->num_rows > 0) {
+                        for ($row = 0; $row = $table->fetch_assoc(); $row++) {
+                            print "<img src='image7/" . $row["image3"] . "' alt='' id='my_image3'>";
+                        }
+                    }
+                    ?>
                 </div>
                 <div class="div_box">
-                    <img src="image7/Capture3.PNG" alt="" id="my_image4">
+                    <?php
+
+                    $table = $data->query("select * from table_prodecut");
+
+                    if ($table->num_rows > 0) {
+                        for ($row = 0; $row = $table->fetch_assoc(); $row++) {
+                            print "<img src='image7/" . $row["image4"] . "' alt='' id='my_image4'>";
+                        }
+                    }
+                    ?>
                 </div>
             </div>
         </div>

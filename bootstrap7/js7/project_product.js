@@ -1,4 +1,5 @@
 document.getElementById("click_block").onclick = () => {
+    var div_scroll = document.getElementById("div_scroll");
     var my_image = document.getElementById("my_image");
     var my_image5 = document.getElementById("my_image5");
     var my_image6 = document.getElementById("my_image6");
@@ -11,11 +12,16 @@ document.getElementById("click_block").onclick = () => {
     var click_arrow1 = document.getElementById("click_arrow1");
     var styleElem = document.head.appendChild(document.createElement("style"));
 
+    div_scroll.style.display = "inline-block";
     my_image.style.width = "630px";
     my_image.style.height = "580px";
+    my_image1.style.width = "100px";
     my_image1.style.height = "100px";
+    my_image2.style.width = "100px";
     my_image2.style.height = "100px";
+    my_image3.style.width = "100px";
     my_image3.style.height = "100px";
+    my_image4.style.width = "100px";
     my_image4.style.height = "100px";
     my_image5.style.width = "630px";
     my_image5.style.height = "580px";
@@ -33,6 +39,7 @@ document.getElementById("click_block").onclick = () => {
 }
 
 document.getElementById("click_icon").onclick = () => {
+    var div_scroll = document.getElementById("div_scroll");
     var my_image = document.getElementById("my_image");
     var my_image5 = document.getElementById("my_image5");
     var my_image6 = document.getElementById("my_image6");
@@ -45,15 +52,19 @@ document.getElementById("click_icon").onclick = () => {
     var click_arrow1 = document.getElementById("click_arrow1");
     var styleElem = document.head.appendChild(document.createElement("style"));
 
+    div_scroll.style.display = "none";
     my_image5.style.width = "0px";
     my_image6.style.height = "0px";
     my_image1.style.height = "0px";
+    my_image1.style.width = "0px";
     my_image.style.width = "0px";
     my_image7.style.height = "0px";
-    my_image1.style.height = "0px";
     my_image2.style.height = "0px";
+    my_image2.style.width = "0px";
     my_image3.style.height = "0px";
+    my_image3.style.width = "0px";
     my_image4.style.height = "0px";
+    my_image4.style.width = "0px";
     click_arrow.style.width = "0px";
     click_arrow.style.height = "0px";
     click_arrow.style.fontSize = "0px";
@@ -65,10 +76,9 @@ document.getElementById("click_icon").onclick = () => {
 
 document.getElementById("click_arrow1").onclick = () => {
     let xPos = Number(my_image.style.marginLeft.replace("px", ""));
-    xPos -= 1170;
+    xPos -= 630;
     my_image.style.marginLeft = xPos + "px";
-
-    if (xPos == -4680) {
+    if (xPos == -2520) {
         xPos = 0;
         my_image.style.marginLeft = xPos + "px";
     }
@@ -87,10 +97,10 @@ document.getElementById("click_arrow1").onclick = () => {
 
 document.getElementById("click_arrow").onclick = () => {
     let xPos = Number(my_image.style.marginLeft.replace("px", ""));
-    xPos += 1170;
+    xPos += 630;
     my_image.style.marginLeft = xPos + "px";
 
-    if (xPos == 1170) {
+    if (xPos == 630) {
         xPos = 0;
         my_image.style.marginLeft = xPos + "px";
     }
